@@ -1,0 +1,187 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <h1>APRENDIENDO SOBRE CSS</h1>
+      </header>
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html">INICIO</a>
+          </li>
+          <li>
+            <a href="1.html">QUE ES CSS?</a>
+          </li>
+          <li>
+            <a href="2.html">SELECTORES</a>
+          </li>
+          <li>
+            <a href="3.html">FRAMEWORKS</a>
+          </li>
+          <li>
+            <a href="4.html">PROPIEDADES Y VALORES</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="clearfix"></div>
+      <section id="content">
+        <img src="css.png" alt="200" height="200" />
+        <img style="margin-left: 30px" src="css.png" alt="200" height="200" />
+
+        <br />
+        <br />
+        <div class="space-bottom-more" style="text-align: justify;">
+          <div class="Markdown-content Cms-content">
+            <p>
+              Los selectores en CSS nos permiten acceder a cualquier elemento o
+              grupo de elementos, para aplicar estilos sobre el/ellos en una
+              única declaración. Como su nombre indica, permiten seleccionar
+              aquellos elementos sobre los que se van a aplicar las reglas de
+              estilo.
+            </p>
+            <p>
+              Dentro del código CSS podemos usar selectores y aplicarles un
+              conjunto de estilos determinado. Para ello escribimos el selector
+              y colocamos los atributos de estilos encerrados entre llaves:
+            </p>
+            <pre
+              class=" language-css"
+            ><code class=" language-css"><span class="token selector">selector</span> <span class="token punctuation">{</span>
+                    <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+                    <span class="token property">width</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+                  <span class="token punctuation">}</span>
+                  </code></pre>
+            <p>
+              Existen selectores de lo más variado, que permiten ajustar de una
+              manera.muy precisa qué elementos se desea seleccionar. Los más
+              importantes son los siguientes:
+            </p>
+            <ul>
+              <li>
+                <strong>Etiqueta</strong>: sirven para seleccionar todos los
+                elementos de una misma etiqueta o tag HTML.
+              </li>
+            </ul>
+            <pre
+              class=" language-css"
+            ><code class=" language-css"><span class="token selector">h1</span> <span class="token punctuation">{</span>
+                    <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">26</span><span class="token unit">px</span><span class="token punctuation">;</span>
+                  <span class="token punctuation">}</span>
+                  </code></pre>
+            <ul>
+              <li>
+                <strong>Clase</strong>: selecciona todos los elementos de una
+                clase determinada. (Class de CSS).
+              </li>
+            </ul>
+            <pre
+              class=" language-css"
+            ><code class=" language-css"><span class="token selector"><span class="token class">.destacado</span></span> <span class="token punctuation">{</span>
+                    <span class="token property">font-weight</span><span class="token punctuation">:</span> bold<span class="token punctuation">;</span>
+                    <span class="token property">color</span><span class="token punctuation">:</span> orange<span class="token punctuation">;</span>	
+                  <span class="token punctuation">}</span>
+                  </code></pre>
+            <ul>
+              <li>
+                <strong>Identificador</strong>: permiten seleccionar etiquetas
+                individuales por el atributo Id de la etiqueta.
+              </li>
+            </ul>
+            <pre
+              class=" language-css"
+            ><code class=" language-css"><span class="token selector"><span class="token id">#fomularioAlta</span></span> <span class="token punctuation">{</span>
+                   <span class="token property">border</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token unit">px</span> solid <span class="token hexcode">#99c</span><span class="token punctuation">;</span> 
+                  <span class="token punctuation">}</span>
+                  </code></pre>
+            <ul>
+              <li>
+                <strong>Atributo</strong>: permiten seleccionar todas las
+                etiquetas que tengan un atributo dado, o bien un atributo con un
+                valor determinado.
+              </li>
+            </ul>
+            <pre
+              class=" language-css"
+            ><code class=" language-css"><span class="token selector"><span class="token attribute"><span class="token punctuation">[</span><span class="token attribute">title</span><span class="token punctuation">]</span></span></span> <span class="token punctuation">{</span>
+                    <span class="token property">text-decoration</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+                  <span class="token punctuation">}</span>
+                  
+                  <span class="token selector"><span class="token attribute"><span class="token punctuation">[</span><span class="token attribute">align</span><span class="token operator">=</span><span class="token value">"center"</span><span class="token punctuation">]</span></span></span> <span class="token punctuation">{</span>
+                    <span class="token property">border</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token unit">px</span> solid red<span class="token punctuation">;</span>
+                  <span class="token punctuation">}</span>
+                  </code></pre>
+            <p>
+              Además, los selectores se pueden combinar entre sí para conseguir
+              selectores mucho más precisos:
+            </p>
+            <p>
+              Estos selectores obtienen las imágenes que tengan el atributo alt
+              y los párrafos que tengan la clase "desactivado".
+            </p>
+            <pre
+              class=" language-css"
+            ><code class=" language-css"><span class="token selector">img<span class="token attribute"><span class="token punctuation">[</span><span class="token attribute">alt</span><span class="token punctuation">]</span></span></span> <span class="token punctuation">{</span>
+                      <span class="token property">border</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+                  <span class="token punctuation">}</span>
+                  
+                  <span class="token selector">p<span class="token class">.desactivado</span></span> <span class="token punctuation">{</span>
+                      <span class="token property">color</span><span class="token punctuation">:</span> <span class="token hexcode">#ddd</span><span class="token punctuation">;</span>
+                  <span class="token punctuation">}</span>
+                  </code></pre>
+            <p>
+              También podemos relacionar los selectores con un espacio y
+              entonces el significado cambia totalmente, ya que se estaría
+              indicando que un elemento tiene que estar dentro de otro.
+            </p>
+            <p>
+              Este selector aplicaría estilos a todos los elementos &lt;h2&gt;
+              que estén dentro de contenedores que tienen la clase "nota".
+            </p>
+            <pre
+              class=" language-css"
+            ><code class=" language-css"><span class="token selector"><span class="token class">.nota</span> h2</span> <span class="token punctuation">{</span>
+                    <span class="token property">font-weight</span><span class="token punctuation">:</span> normal<span class="token punctuation">;</span>
+                  <span class="token punctuation">}</span>
+                  </code></pre>
+            <p>
+              También podemos combinar los selectores de CSS usando una coma.
+              Entonces estamos indicando que los atributos de estilo deben
+              aplicarse a los dos selectores por separado.
+            </p>
+            <p>
+              Así estaríamos indicando que queremos aplicar estilos sobre todos
+              los párrafos y todas las divisiones con la clase "bloque".
+            </p>
+            <pre
+              class=" language-css"
+            ><code class=" language-css"><span class="token selector">p, div<span class="token class">.bloque</span></span> <span class="token punctuation">{</span>
+                      <span class="token property">margin-bottom</span><span class="token punctuation">:</span> <span class="token number">25</span><span class="token unit">px</span><span class="token punctuation">;</span>  
+                  <span class="token punctuation">}</span>
+                  </code></pre>
+          </div>
+        </div>
+      </section>
+
+      <aside>
+        <h2>Barra de información</h2>
+        <br />
+        <h4>ROMARIO SALAS DIAZ</h4>
+        <img src="foto.png" alt="100" height="100" />
+        <br />
+        <p style="font-weight: bold;">Email: romariosalas13@gmail.com</p>
+        <p style="font-weight: bold;">Cel: 3042100633</p>
+        <br />
+        <p style="font-weight: bold;">Lugar de trabajo</p>
+        <img src="ies.png" alt="200" height="200" />
+      </aside>
+      <div class="clearfix"></div>
+      <footer>
+        ROMARIO SALAS DIAZ WEB &copy; 2021
+      </footer>
+    </div>
+  </body>
+</html>
